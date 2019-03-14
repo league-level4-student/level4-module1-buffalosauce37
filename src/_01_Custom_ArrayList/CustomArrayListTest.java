@@ -1,6 +1,8 @@
 package _01_Custom_ArrayList;
 
 import static org.junit.Assert.*;
+import static org.junit.jupiter.api.Assertions.assertThrows;
+
 import org.junit.jupiter.api.Test;
 
 //Complete the ArrayList class using the template to make the tests pass.
@@ -17,6 +19,17 @@ public class CustomArrayListTest {
 		if(list.get(0) != 0) fail("list.get(0) returning improper value.");
 		if(list.get(1) != 1) fail("list.get(1) returning improper value.");
 		if(list.get(2) != 206) fail("list.get(2) returning improper value.");
+	}
+	
+	@Test
+	public void testGetOutOfBounds() {
+		ArrayList<Integer> list = new ArrayList<Integer>();
+		list.add(0);
+		
+		
+		assertThrows(IndexOutOfBoundsException.class, () -> {
+			list.get(1);
+	    });
 	}
 	
 	@Test
