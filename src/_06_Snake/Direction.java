@@ -1,3 +1,5 @@
+
+
 package _06_Snake;
 
 public enum Direction {
