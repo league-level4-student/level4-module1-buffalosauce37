@@ -59,7 +59,7 @@ public class Snake {
 		for (int i = snake.size()-1; i > 0; i--) {
 			SnakeSegment nextLoc = snake.get(i-1);
 			SnakeSegment currentLoc = snake.get(i);
-			currentLoc.setLocation(nextLoc.getLocation());
+			currentLoc.setLocation(new Location(nextLoc.getLocation().x, nextLoc.getLocation().y));
 		}
 		
 		//3. set the location of the head to the new location calculated in step 1
